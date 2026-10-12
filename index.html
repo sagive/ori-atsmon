@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>אורי עצמון | יזמות נדל"ן והתחדשות עירונית - Ori Atsmon</title>
+  <meta name="description" content="אורי עצמון - יזם נדל&quot;ן, משקיע ומומחה מוביל להתחדשות עירונית בישראל ופיתוח פרויקטים בפורטוגל ואירופה. 25+ שנות ניסיון במצוינות עסקית והנדסית.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #c5a880;
+      --primary-light: #dfcaa7;
+      --bg-dark: #0b111e;
+      --bg-card: #131b2e;
+      --bg-card-hover: #1c2742;
+      --text-main: #f0f4f8;
+      --text-muted: #94a3b8;
+      --border-color: rgba(197, 168, 128, 0.2);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Heebo', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      direction: rtl;
+      overflow-x: hidden;
+    }
+    a { color: var(--primary); text-decoration: none; transition: 0.3s; }
+    a:hover { color: var(--primary-light); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Header */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      background: rgba(11, 17, 30, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+    .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 800; color: #fff; letter-spacing: 0.5px; }
+    .logo span { color: var(--primary); }
+    nav ul { display: flex; list-style: none; gap: 20px; }
+    nav a { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); }
+    nav a:hover { color: #fff; }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(197, 168, 128, 0.15);
+      border: 1px solid var(--border-color);
+      color: var(--primary);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, #ffffff 0%, var(--primary-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero .en-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .hero p {
+      max-width: 750px;
+      margin: 0 auto 35px;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .hero-btns { display: flex; justify-content: center; gap: 15px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--bg-dark);
+      border: 1px solid var(--primary);
+    }
+    .btn-primary:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(197, 168, 128, 0.3);
+    }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1px solid var(--border-color);
+    }
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Section Styles */
+    section { padding: 60px 0; }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 45px;
+      font-size: 1rem;
+    }
+
+    /* About */
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 40px;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: #e2e8f0;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Grid / Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 30px;
+      transition: all 0.3s;
+    }
+    .service-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-5px);
+      border-color: var(--primary);
+    }
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+    .service-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Portugal Section */
+    .portugal-box {
+      background: linear-gradient(135deg, rgba(19, 27, 46, 0.9) 0%, rgba(28, 39, 66, 0.9) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+    .portugal-text h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .portugal-text p {
+      color: #cbd5e1;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .cities-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+    .city-tag {
+      background: rgba(197, 168, 128, 0.2);
+      color: var(--primary-light);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Links Hub */
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .link-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 18px;
+      border-radius: 10px;
+      text-align: center;
+      transition: all 0.3s;
+      display: block;
+      color: #fff;
+    }
+    .link-card:hover {
+      border-color: var(--primary);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+    }
+    .link-name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+    .link-desc { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .portugal-box { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-wrapper">
+      <div class="logo">אורי <span>עצמון</span></div>
+      <nav>
+        <ul>
+          <li><a href="#about">אודות</a></li>
+          <li><a href="#expertise">מומחיות</a></li>
+          <li><a href="#portugal">פורטוגל</a></li>
+          <li><a href="#profiles">פרופילים</a></li>
+          <li><a href="#contact">צור קשר</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="badge">מצוינות עסקית והנדסית • 25+ שנות ניסיון</div>
+        <h1>אורי עצמון</h1>
+        <div class="en-name">Ori Atsmon | Real Estate Entrepreneur</div>
+        <p>
+          יזם נדל"ן, משקיע ומומחה להתחדשות עירונית בישראל ופיתוח פרויקטים בפורטוגל ואירופה. 
+          הובלת פרויקטי פינוי-בינוי, תמ"א 38 והשבחת מתחמי מגורים ומסחר בינלאומיים ברמה הגבוהה ביותר.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">ליצירת קשר ופגישה</a>
+          <a href="#profiles" class="btn btn-outline">צפייה בכל הפרופילים</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">אודות אורי עצמון</h2>
+        <div class="section-sub">רקע מקצועי, חזון וערכים מובילים</div>
+        <div class="about-card">
+          <p>
+            אורי עצמון הינו יזם נדל"ן ותיק, מוביל דעה ומשקיע בעל למעלה מ-25 שנות ניסיון בענף הנדל"ן, ההתחדשות העירונית והפיתוח הבינלאומי.
+            לאורך שנות פעילותו צבר מומחיות עמוקה בהובלת פרויקטים רחבי היקף של פינוי-בינוי ותמ"א 38 באזורי הביקוש בישראל – החל משלבי התכנון הראשוני, הסכמי דיירים, הליכי רישוי בוועדות התכנון, ועד לבנייה קפדנית ומסירת מפתח.
+          </p>
+          <br>
+          <p>
+            בשנים האחרונות הרחיב אורי עצמון את פעילותו לשווקים הבינלאומיים באירופה, תוך התמקדות בפורטוגל (ליסבון, פורטו ובראגה), שם הוא יוזם ומשביח פרויקטים של מתחמי מגורים, מבנים היסטוריים לשימור ומלונאות אורבנית.
+            עבודתו מבוססת על יסודות של יושרה ללא פשרות, שקיפות מלאה מול שותפים ומשקיעים, וחזון לעיצוב מרחבים אורבניים מתקדמים המשרתים את הקהילה לשנים קדימה.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="container">
+        <h2 class="section-title">תחומי מומחיות</h2>
+        <div class="section-sub">פתרונות מקיפים משלב הייזום ועד הביצוע</div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">🏗️</div>
+            <h3>התחדשות עירונית ופינוי בינוי</h3>
+            <p>ניהול והובלת מתחמי פינוי-בינוי ותמ"א 38 בישראל, יצירת ערך מקסימלי לדיירים ושדרוג התשתיות העירוניות.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🇵🇹</div>
+            <h3>יזמות נדל"ן בפורטוגל</h3>
+            <p>איתור, רכישה, ייזום והשבחה של נכסי נדל"ן ומבנים היסטוריים בליסבון, פורטו, בראגה וקוימברה.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📐</div>
+            <h3>פיקוח הנדסי ובקרת איכות</h3>
+            <p>ניהול תהליכי תכנון וביצוע קפדניים, עמידה בלוחות זמנים ותקציב, ובחירת הקבלנים ואנשי המקצוע המובילים.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🧭</div>
+            <h3>איתור קרקעות ופיתוח עסקי</h3>
+            <p>זיהוי הזדמנויות השקעה אטרקטיביות, עסקאות קומבינציה ושינוי ייעוד קרקעות באזורי ביקוש גבוהים.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">💼</div>
+            <h3>ליווי משקיעים וקרנות</h3>
+            <p>בניית אסטרטגיות השקעה חכמות, פיזור סיכונים, וליווי פיננסי ומשפטי מקצועי עבור משקיעים פרטיים ומוסדיים.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🌐</div>
+            <h3>שותפויות אסטרטגיות באירופה</h3>
+            <p>חיבור בין גורמי הון, אדריכלים בינלאומיים ויזמים מקומיים להובלת פרויקטי בוטיק ייחודיים.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portugal">
+      <div class="container">
+        <div class="portugal-box">
+          <div class="portugal-text">
+            <h3>יזמות והשבחת נדל"ן בפורטוגל</h3>
+            <p>
+              שוק הנדל"ן בפורטוגל מציע שילוב ייחודי של יציבות אירופית, ביקוש גבוה למגורים ולתיירות, והזדמנויות השבחה משמעותיות.
+              אורי עצמון מוביל פרויקטים נבחרים המתמקדים בשימור וחידוש מבנים היסטוריים, בניית דירות בוטיק ומלונאות אורבנית.
+            </p>
+            <div class="cities-tags">
+              <span class="city-tag">ליסבון (Lisbon)</span>
+              <span class="city-tag">פורטו (Porto)</span>
+              <span class="city-tag">בראגה (Braga)</span>
+              <span class="city-tag">קוימברה (Coimbra)</span>
+            </div>
+          </div>
+          <div class="about-card" style="padding: 25px; background: rgba(11, 17, 30, 0.6);">
+            <h4 style="color: #fff; margin-bottom: 12px; font-size: 1.15rem;">עקרונות ההשקעה בפורטוגל:</h4>
+            <ul style="padding-right: 20px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
+              <li>מיקומי פריים במרכזי הערים המובילות</li>
+              <li>השבחה אדריכלית תוך שמירה על אופי המבנה</li>
+              <li>ליווי משפטי, רגולטורי ומיסויי מלא</li>
+              <li>תשואות יציבות ופוטנציאל עליית ערך גבוה</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profiles">
+      <div class="container">
+        <h2 class="section-title">פרופילים ונוכחות דיגיטלית</h2>
+        <div class="section-sub">עקבו אחר אורי עצמון בפלטפורמות המובילות</div>
+        <div class="links-grid">
+          <a href="https://oriatzmon.mystrikingly.com/" target="_blank" class="link-card">
+            <div class="link-name">Strikingly</div>
+            <div class="link-desc">אתר אישי רשמי</div>
+          </a>
+          <a href="https://oriatzmon.carrd.co" target="_blank" class="link-card">
+            <div class="link-name">Carrd</div>
+            <div class="link-desc">כרטיס ביקור דיגיטלי</div>
+          </a>
+          <a href="https://oriatzmon.wixsite.com/ori-atsmon-profile" target="_blank" class="link-card">
+            <div class="link-name">Wix Profile</div>
+            <div class="link-desc">פורטפוליו ומידע מקיף</div>
+          </a>
+          <a href="https://oriatzmon0.wordpress.com/" target="_blank" class="link-card">
+            <div class="link-name">WordPress</div>
+            <div class="link-desc">בלוג נדל"ן וערים בפורטוגל</div>
+          </a>
+          <a href="https://readymag.website/u3335965622/oriatsmon" target="_blank" class="link-card">
+            <div class="link-name">Readymag</div>
+            <div class="link-desc">פלטפורמת עיצוב ופרויקטים</div>
+          </a>
+          <a href="https://oriatsmon.tilda.ws/" target="_blank" class="link-card">
+            <div class="link-name">Tilda</div>
+            <div class="link-desc">דף נחיתה מקצועי</div>
+          </a>
+          <a href="https://mon-oriatzori-atsmon-2.jimdosite.com" target="_blank" class="link-card">
+            <div class="link-name">Jimdo</div>
+            <div class="link-desc">אתר עסקי ופעילות</div>
+          </a>
+          <a href="https://linktr.ee/oriatzmon" target="_blank" class="link-card">
+            <div class="link-name">Linktree</div>
+            <div class="link-desc">ריכוז כל הקישורים</div>
+          </a>
+          <a href="https://solo.to/oriatzmon" target="_blank" class="link-card">
+            <div class="link-name">Solo.to</div>
+            <div class="link-desc">דף פרופיל אישי</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title">יצירת קשר</h2>
+        <div class="section-sub">לתיאום פגישה, שיתופי פעולה והזדמנויות השקעה</div>
+        <div class="about-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+          <p style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 10px;">אורי עצמון | Ori Atsmon</p>
+          <p style="color: var(--text-muted); margin-bottom: 20px;">יזם נדל"ן ומומחה להתחדשות עירונית</p>
+          <p style="font-size: 1.1rem; color: var(--primary);">
+            דוא"ל: <a href="mailto:oriatzmon@hotmail.com">oriatzmon@hotmail.com</a>
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 15px;">
+            תל אביב, ישראל • ליסבון, פורטוגל
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 אורי עצמון (Ori Atsmon). כל הזכויות שמורות.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ori Atsmon",
+    "alternateName": "אורי עצמון",
+    "jobTitle": "Real Estate Entrepreneur & Urban Renewal Expert",
+    "email": "oriatzmon@hotmail.com",
+    "sameAs": [
+      "https://oriatzmon.mystrikingly.com/",
+      "https://oriatzmon.carrd.co",
+      "https://oriatzmon.wixsite.com/ori-atsmon-profile",
+      "https://oriatzmon0.wordpress.com/",
+      "https://readymag.website/u3335965622/oriatsmon",
+      "https://oriatsmon.tilda.ws/",
+      "https://mon-oriatzori-atsmon-2.jimdosite.com",
+      "https://linktr.ee/oriatzmon",
+      "https://solo.to/oriatzmon"
+    ]
+  }
+  </script>
+</body>
+</html>
